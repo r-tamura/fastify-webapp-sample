@@ -1,4 +1,5 @@
 import { setCommonPlugins, setHeadlessWhen } from "@codeceptjs/configure";
+require("dotenv").config();
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
@@ -11,6 +12,7 @@ export const config: CodeceptJS.MainConfig = {
   output: "./output",
   helpers: {
     Playwright: {
+      url: process.env.BASE_URL,
       browser: "chromium",
       show: false,
     }
