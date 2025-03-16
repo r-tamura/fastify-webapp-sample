@@ -7,6 +7,12 @@ setHeadlessWhen(process.env.HEADLESS);
 // enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
 setCommonPlugins();
 
+if (process.env.BASE_URL === undefined) {
+  throw new Error("BASE_URL is required to run tests");
+}
+console.log("BASE_URL", process.env.BASE_URL);
+console.log("HEADLESS", process.env.HEADLESS);
+
 export const config: CodeceptJS.MainConfig = {
   tests: "./*_test.ts",
   output: "./output",
