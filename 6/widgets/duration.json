@@ -1,0 +1,11 @@
+[ {
+  "uid" : "5b46b79bbd172bb7",
+  "name" : "Webサイトを開きログインする",
+  "time" : {
+    "start" : 1742621280546,
+    "stop" : 1742621283713,
+    "duration" : 3167
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

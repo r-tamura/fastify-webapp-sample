@@ -1,0 +1,22 @@
+{
+  "19e7e407a28187be884ab38c68405214:d41d8cd98f00b204e9800998ecf8427e" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5b46b79bbd172bb7",
+      "reportUrl" : "https://r-tamura.github.io/fastify-webapp-sample/6/#testresult/5b46b79bbd172bb7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1742621280546,
+        "stop" : 1742621283713,
+        "duration" : 3167
+      }
+    } ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az1672-35",
+    "children" : [ {
+      "name" : "pid-6342-worker-main",
+      "children" : [ {
+        "name" : "Webサイトを開きログインする",
+        "uid" : "5b46b79bbd172bb7",
+        "parentUid" : "d5897d7b4791f4d588ac86b994d66ee9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1742621280546,
+          "stop" : 1742621283713,
+          "duration" : 3167
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "d5897d7b4791f4d588ac86b994d66ee9"
+    } ],
+    "uid" : "dd3355a311620265b93054f602ff7b77"
+  } ],
+  "name" : "timeline"
+}
