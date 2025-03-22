@@ -69,6 +69,31 @@ jobs:
         BASE_URL: https://fastify-webapp-sample-staging-a8c7.up.railway.app
         HEADLESS: true
 
+    - name: Load test rport history
+      uses: actions/checkout@v4
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+
+    - name: Build test report
+      uses: simple-elf/allure-report-action@v1
+      if: always()
+      with:
+        gh_pages: gh-pages
+        allure_history: allure-history
+        allure_report: allure-report
+        allure_results: e2e/allure-results
+
+    - name: Publish test report
+      uses: peaceiris/actions-gh-pages@v3
+      if: always()
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-history
+
   deploy-production:
     name: Deploy to Production
     needs: e2e-staging
