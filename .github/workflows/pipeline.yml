@@ -27,23 +27,19 @@ jobs:
     - name: Install Railway CLI
       run: npm i -g @railway/cli
 
-    - name: Deploy to Railway Staging
-      run: railway up --service fastify-webapp-sample -e staging
-      env:
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_STAGING_TOKEN }}
-
-    # GitHub環境コンテキストが理解できていないので、一旦コメントアウト
-    # 現状、マイグレーションはローカルマシンから実行している
-    # TODO: GitHub Actions上でDBマイグレーションするようようにする
     - name: Run Database Migrations
-      run: railway run npm run db:migrate
+      run: npm run db:migrate
       env:
-        RAILWAY_TOKEN: ${{ secrets.RAILWAY_STAGING_TOKEN }}
         PGHOST: ${{ vars.PGHOST }}
         PGPORT: ${{ vars.PGPORT }}
         PGUSER: ${{ vars.PGUSER }}
         PGPASSWORD: ${{ secrets.PGPASSWORD }}
         PGDATABASE: ${{ vars.PGDATABASE }}
+
+    - name: Deploy to Railway Staging
+      run: railway up --service fastify-webapp-sample -e staging
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_STAGING_TOKEN }}
 
   e2e-staging:
     name: E2E Tests on Staging
