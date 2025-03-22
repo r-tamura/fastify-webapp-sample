@@ -68,3 +68,38 @@ jobs:
       env:
         BASE_URL: https://fastify-webapp-sample-staging-a8c7.up.railway.app
         HEADLESS: true
+
+  deploy-production:
+    name: Deploy to Production
+    needs: e2e-staging
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Install Railway CLI
+      run: npm i -g @railway/cli
+
+    - name: Run Database Migrations
+      run: npm run db:migrate
+      env:
+        PGHOST: ${{ vars.PGHOST }}
+        PGPORT: ${{ vars.PGPORT }}
+        PGUSER: ${{ vars.PGUSER }}
+        PGPASSWORD: ${{ secrets.PGPASSWORD }}
+        PGDATABASE: ${{ vars.PGDATABASE }}
+
+    - name: Deploy to Railway Production
+      run: railway up --service fastify-webapp-sample -e production
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
