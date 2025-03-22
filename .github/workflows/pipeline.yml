@@ -45,11 +45,6 @@ jobs:
         PGPASSWORD: ${{ secrets.PGPASSWORD }}
         PGDATABASE: ${{ vars.PGDATABASE }}
 
-    # 次のワークフローのトリガーのため、デプロイ状態を出力
-    - name: Set deployment status
-      run: echo "deployment=success" >> $GITHUB_OUTPUT
-      id: deploy
-
   e2e-staging:
     name: E2E Tests on Staging
     needs: deploy-staging
