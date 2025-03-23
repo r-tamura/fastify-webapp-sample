@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://r-tamura.github.io/fastify-webapp-sample",
+  "buildOrder" : 7,
+  "buildName" : "GitHub Actions Run #14014910916",
+  "buildUrl" : "https://github.com/r-tamura/fastify-webapp-sample/actions/runs/14014910916",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://r-tamura.github.io/fastify-webapp-sample/7"
+} ]

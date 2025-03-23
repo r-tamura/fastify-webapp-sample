@@ -1,0 +1,39 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "smoke_test.ts",
+    "children" : [ {
+      "name" : "Webサイトを開きログインする",
+      "uid" : "8eace01b821694ed",
+      "parentUid" : "652a4cb0d2187166dd06a816ea9fccc1",
+      "status" : "passed",
+      "time" : {
+        "start" : 1742699197443,
+        "stop" : 1742699200346,
+        "duration" : 2903
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "smoke_test.ts"
+  }, {
+    "name" : "generic_error_test.ts",
+    "children" : [ {
+      "name" : "ユーザーが存在しないURLにアクセスすると、エラーメッセージと商品一覧へのリングが表示される",
+      "uid" : "47608ddfebdff16f",
+      "parentUid" : "c3696f3546bde8244c1bc7f5f97678d7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1742699200358,
+        "stop" : 1742699201210,
+        "duration" : 852
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "generic_error_test.ts"
+  } ],
+  "name" : "packages"
+}

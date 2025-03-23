@@ -1,0 +1,21 @@
+[ {
+  "uid" : "47608ddfebdff16f",
+  "name" : "ユーザーが存在しないURLにアクセスすると、エラーメッセージと商品一覧へのリングが表示される",
+  "time" : {
+    "start" : 1742699200358,
+    "stop" : 1742699201210,
+    "duration" : 852
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8eace01b821694ed",
+  "name" : "Webサイトを開きログインする",
+  "time" : {
+    "start" : 1742699197443,
+    "stop" : 1742699200346,
+    "duration" : 2903
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

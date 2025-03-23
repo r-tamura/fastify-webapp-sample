@@ -1,0 +1,39 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "smoke",
+    "children" : [ {
+      "name" : "Webサイトを開きログインする",
+      "uid" : "8eace01b821694ed",
+      "parentUid" : "5cb29270970212a21ddc65b09a4fe781",
+      "status" : "passed",
+      "time" : {
+        "start" : 1742699197443,
+        "stop" : 1742699200346,
+        "duration" : 2903
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "5cb29270970212a21ddc65b09a4fe781"
+  }, {
+    "name" : "一般的なエラーのテスト",
+    "children" : [ {
+      "name" : "ユーザーが存在しないURLにアクセスすると、エラーメッセージと商品一覧へのリングが表示される",
+      "uid" : "47608ddfebdff16f",
+      "parentUid" : "1a8b6c60b71fbda0cff41beadd4f4c46",
+      "status" : "passed",
+      "time" : {
+        "start" : 1742699200358,
+        "stop" : 1742699201210,
+        "duration" : 852
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "1a8b6c60b71fbda0cff41beadd4f4c46"
+  } ],
+  "name" : "suites"
+}

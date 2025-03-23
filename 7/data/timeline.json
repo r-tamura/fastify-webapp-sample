@@ -1,0 +1,39 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az790-259",
+    "children" : [ {
+      "name" : "pid-6336-worker-main",
+      "children" : [ {
+        "name" : "Webサイトを開きログインする",
+        "uid" : "8eace01b821694ed",
+        "parentUid" : "4bcfd8adf60182f004c53ce72d5ae76d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1742699197443,
+          "stop" : 1742699200346,
+          "duration" : 2903
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "ユーザーが存在しないURLにアクセスすると、エラーメッセージと商品一覧へのリングが表示される",
+        "uid" : "47608ddfebdff16f",
+        "parentUid" : "4bcfd8adf60182f004c53ce72d5ae76d",
+        "status" : "passed",
+        "time" : {
+          "start" : 1742699200358,
+          "stop" : 1742699201210,
+          "duration" : 852
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4bcfd8adf60182f004c53ce72d5ae76d"
+    } ],
+    "uid" : "1eda0a9b720b2ee820ee53e627a3cb06"
+  } ],
+  "name" : "timeline"
+}
