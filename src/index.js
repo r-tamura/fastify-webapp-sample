@@ -1,17 +1,16 @@
+import formbody from "@fastify/formbody";
+import postgres from "@fastify/postgres";
+import view from "@fastify/view";
+import * as dotenv from "dotenv";
+import ejs from "ejs";
 import fastify from "fastify";
-import view from "@fastify/view"
-import postgres from "@fastify/postgres"
-import formbody from "@fastify/formbody"
-import ejs from "ejs"
 import authConfig from "./lib/authConfig.js";
-import loginRoutes from "./routes/login.js";
 import itemRoutes from "./routes/items.js";
+import loginRoutes from "./routes/login.js";
 import orderRoutes from "./routes/order.js";
-import signUpRoutes from "./routes/signUp.js";
 import publicRoutes from "./routes/public.js";
-import * as dotenv from "dotenv"
+import signUpRoutes from "./routes/signUp.js";
 import usersRoute from "./routes/users.js";
-import path from 'path'
 
 dotenv.config()
 const server = fastify();
@@ -42,6 +41,10 @@ server.register(publicRoutes, { passport })
 server.get('/', (request, reply) => {
   reply.redirect(302, '/items')
 })
+
+server.setNotFoundHandler((request, reply) => {
+  reply.view('src/views/404.ejs');
+});
 
 server.listen({ host: '0.0.0.0', port: process.env.PORT || 8080 }, (err, address) => {
   if (err) {
